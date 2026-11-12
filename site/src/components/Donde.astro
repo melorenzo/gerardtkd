@@ -1,0 +1,36 @@
+---
+const lugares = [
+  {
+    nombre: 'Villa Lynch',
+    lugar: 'Soc. de Fomento Dr. Figueroa Alcorta',
+    dir: 'Av. Rodríguez Peña 4754',
+    dias: 'Martes y jueves',
+    maps: 'https://www.google.com/maps/search/?api=1&query=Sociedad%20de%20Fomento%20Figueroa%20Alcorta%2C%20Rodr%C3%ADguez%20Pe%C3%B1a%204754%2C%20Villa%20Lynch',
+  },
+  {
+    nombre: 'Loma Hermosa',
+    lugar: 'Club Ñande Roga',
+    dir: 'Jujuy 1637',
+    dias: 'Miércoles y viernes',
+    maps: 'https://www.google.com/maps/search/?api=1&query=Club%20%C3%91ande%20Roga%2C%20Jujuy%201637%2C%20Loma%20Hermosa',
+  },
+];
+---
+<section id="donde">
+  <div class="wrap">
+    <span class="eyebrow">Ubicaciones</span>
+    <h2 class="disp">Dónde entrenamos</h2>
+    <p class="sub">Dos sedes en zona norte, más los entrenamientos funcionales al aire libre.</p>
+    <div class="mt-9 grid gap-4 min-[760px]:grid-cols-2">
+      {lugares.map((l) => (
+        <div class="rounded-xl border p-6" style="border-color:var(--line);background:var(--panel)">
+          <b class="disp" style="font-size:22px">{l.nombre}</b>
+          <div class="mt-2 text-[15px]">{l.lugar}</div>
+          <div class="text-[14.5px]" style="color:var(--dim)">{l.dir}</div>
+          <div class="mt-4 text-[14.5px]" style="color:var(--ac);font-weight:600">{l.dias}</div>
+          <a class="btn s mt-5" href={l.maps} target="_blank" rel="noopener">Cómo llegar</a>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

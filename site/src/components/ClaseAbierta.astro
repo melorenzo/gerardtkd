@@ -1,0 +1,25 @@
+---
+const wa = 'https://wa.me/5491131074612?text=Hola%20Gerardo%2C%20escribo%20desde%20la%20p%C3%A1gina%20por%20la%20clase%20abierta%20del%20mi%C3%A9rcoles%2028%20en%20Loma%20Hermosa';
+const maps = 'https://www.google.com/maps/search/?api=1&query=Club%20%C3%91ande%20Roga%2C%20Jujuy%201637%2C%20Loma%20Hermosa';
+const cal = 'https://calendar.google.com/calendar/render?action=TEMPLATE&text=Clase%20abierta%20y%20gratuita%20de%20Taekwon-Do&dates=20261028T190000%2F20261028T200000&ctz=America%2FArgentina%2FBuenos_Aires&location=Club%20%C3%91ande%20Roga%2C%20Jujuy%201637%2C%20Loma%20Hermosa';
+---
+<section class="abierta" id="clase-abierta" data-hasta="2026-10-29">
+  <div class="wrap grid gap-[22px] items-center min-[820px]:grid-cols-2">
+    <img src="/img/clase-abierta.jpg" alt="Afiche de la clase abierta de Taekwon-Do ITF en Club Ñande Roga" width="1080" height="1620" loading="lazy" decoding="async" class="mx-auto rounded-[10px]" style="width:min(88vw,460px);height:auto" />
+    <div>
+      <div class="eyebrow">Miércoles 28 de octubre · 19 hs<span id="abierta-falta"></span></div>
+      <h2 class="disp">Clase abierta y gratuita</h2>
+      <p class="sub">En la sede nueva de <b>Loma Hermosa</b>: Club Ñande Roga, Jujuy 1637.
+      A las 19 hs, para chicos, adolescentes y adultos: abierta a toda la familia. Y promo grupo familiar
+      con 30% off.</p>
+      <div class="cta" style="margin-top:16px">
+        <a class="btn" href={wa} target="_blank" rel="noopener">Quiero ir a la clase abierta</a>
+        <a class="btn s" href={maps} target="_blank" rel="noopener">Cómo llegar</a>
+        <a class="btn s" href={cal} target="_blank" rel="noopener">Agendar</a>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .abierta{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:44px 0}
+</style>

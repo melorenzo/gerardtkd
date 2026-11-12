@@ -1,0 +1,76 @@
+---
+const wa = 'https://wa.me/5491131074612?text=Hola%20Gerardo%2C%20escribo%20desde%20la%20p%C3%A1gina%20y%20quiero%20consultar%20por%20las%20clases';
+const links = [
+  { href: '#clases', label: 'Clases' },
+  { href: '#profe', label: 'Gerardo' },
+  { href: '#fotos', label: 'La escuela' },
+  { href: '#clase-abierta', label: 'Clase abierta' },
+  { href: '#donde', label: 'Dónde' },
+];
+---
+<header class="site-header sticky top-0 z-40 border-b" style="background:rgba(11,13,17,.92);backdrop-filter:blur(8px);border-color:var(--line)">
+  <div class="wrap flex items-center justify-between h-[62px] gap-3">
+    <a class="logo" href="#top">ITF ATRA<span> SÁENZ PEÑA</span></a>
+
+    <nav class="hidden min-[820px]:flex gap-[26px]" aria-label="Principal">
+      {links.map((l) => (
+        <a href={l.href} style="color:var(--dim)" class="text-[14.5px] no-underline hover:text-white">{l.label}</a>
+      ))}
+    </nav>
+
+    <div class="flex items-center gap-2">
+      <a class="btn wa-top" href={wa} target="_blank" rel="noopener">WhatsApp</a>
+      <button
+        class="menu-btn min-[820px]:hidden inline-flex items-center justify-center rounded-lg border"
+        type="button"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        style="border-color:var(--line);color:var(--ink);width:42px;height:42px;background:transparent"
+      >
+        <svg class="icon-open" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <line x1="4" y1="7" x2="20" y2="7" /><line x1="4" y1="12" x2="20" y2="12" /><line x1="4" y1="17" x2="20" y2="17" />
+        </svg>
+        <svg class="icon-close hidden" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <line x1="6" y1="6" x2="18" y2="18" /><line x1="18" y1="6" x2="6" y2="18" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <nav id="mobile-menu" class="mobile-menu min-[820px]:hidden border-t" aria-label="Menú móvil" hidden style="border-color:var(--line);background:rgba(11,13,17,.98)">
+    <div class="wrap py-3 flex flex-col">
+      {links.map((l) => (
+        <a href={l.href} class="mobile-link py-3 text-[16px] no-underline border-b" style="color:var(--ink);border-color:var(--line)">{l.label}</a>
+      ))}
+      <a class="btn mt-4 text-center" href={wa} target="_blank" rel="noopener">Consultar por WhatsApp</a>
+    </div>
+  </nav>
+</header>
+
+<script>
+  const header = document.currentScript?.closest('header') ?? document.querySelector('.site-header');
+  const btn = header?.querySelector('.menu-btn') as HTMLButtonElement | null;
+  const menu = header?.querySelector('#mobile-menu') as HTMLElement | null;
+  const iconOpen = header?.querySelector('.icon-open');
+  const iconClose = header?.querySelector('.icon-close');
+  const setOpen = (open: boolean) => {
+    if (!btn || !menu) return;
+    btn.setAttribute('aria-expanded', String(open));
+    btn.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+    menu.hidden = !open;
+    iconOpen?.classList.toggle('hidden', open);
+    iconClose?.classList.toggle('hidden', !open);
+  };
+  btn?.addEventListener('click', () => setOpen(btn.getAttribute('aria-expanded') !== 'true'));
+  menu?.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => setOpen(false)));
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setOpen(false); });
+</script>
+
+<style>
+  .logo{font-family:Oswald,sans-serif;text-transform:uppercase;font-weight:700;letter-spacing:.06em;
+        font-size:18px;text-decoration:none;color:var(--ink)}
+  .logo span{color:var(--ac)}
+  .mobile-link:last-of-type{border-bottom:0}
+  @media(max-width:420px){ .wa-top{display:none} }
+</style>

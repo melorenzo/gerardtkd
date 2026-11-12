@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1419" width="1080" height="1419" role="img" aria-label="Placeholder: afiche clase abierta">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#12151b"/>
+      <stop offset="100%" stop-color="#0b0d11"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1419" fill="url(#bg)"/>
+  <rect x="36" y="36" width="1008" height="1347" rx="18" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="3"/>
+  <rect x="36" y="36" width="1008" height="10" rx="5" fill="#2f6fd0" opacity=".9"/>
+  <text x="540" y="150" text-anchor="middle" font-family="Oswald, Arial, sans-serif" font-size="44" fill="#2f6fd0" letter-spacing="6">ITF ATRA SÁENZ PEÑA</text>
+  <text x="540" y="310" text-anchor="middle" font-family="Oswald, Arial, sans-serif" font-size="96" fill="#f2f4f7" font-weight="700">CLASE ABIERTA</text>
+  <text x="540" y="400" text-anchor="middle" font-family="Oswald, Arial, sans-serif" font-size="72" fill="#2f6fd0" font-weight="700">Y GRATUITA</text>
+  <g transform="translate(540,720)" opacity=".85">
+    <circle cx="0" cy="0" r="150" fill="none" stroke="#2f6fd0" stroke-width="3" opacity=".35"/>
+    <path d="M-60 90 L-20 -20 L-50 -130" stroke="#f2f4f7" stroke-width="14" stroke-linecap="round" fill="none" opacity=".6"/>
+    <path d="M-20 -20 L60 -40 L170 -85" stroke="#2f6fd0" stroke-width="16" stroke-linecap="round" fill="none"/>
+    <circle cx="-50" cy="-160" r="26" fill="#f2f4f7" opacity=".6"/>
+  </g>
+  <text x="540" y="1040" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="40" fill="#f2f4f7">Miércoles 28 de octubre · 19 hs</text>
+  <text x="540" y="1105" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="34" fill="#98a0ad">Loma Hermosa · Club Ñande Roga</text>
+  <text x="540" y="1160" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="34" fill="#98a0ad">Jujuy 1637</text>
+  <text x="540" y="1320" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="26" fill="#98a0ad" opacity=".75">PLACEHOLDER · Reemplazar por el afiche real</text>
+</svg>

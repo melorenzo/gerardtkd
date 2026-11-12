@@ -1,0 +1,23 @@
+---
+const fotos = [
+  { src: '/img/foto-grupo.jpg', alt: 'Grupo completo de alumnos de la escuela' },
+  { src: '/img/foto-medallas.jpg', alt: 'Alumnos con medallas junto al instructor' },
+  { src: '/img/foto-examen.jpg', alt: 'Entrega de certificados en un examen' },
+  { src: '/img/foto-kids.jpg', alt: 'Clase de kids en formación' },
+  { src: '/img/profe-2.jpg', alt: 'Corrección de técnica en el dojo' },
+  { src: '/img/hero.jpg', alt: 'Entrenamiento en el tatami' },
+];
+---
+<section id="fotos">
+  <div class="wrap">
+    <span class="eyebrow">La escuela</span>
+    <h2 class="disp">Fotos</h2>
+    <p class="sub">Entrenamientos, exámenes y la comunidad de la escuela.</p>
+    <div class="mt-8 grid gap-3 grid-cols-2 min-[760px]:grid-cols-3">
+      {fotos.map((f) => (
+        <img src={f.src} alt={f.alt} width="1080" height="1080" loading="lazy" decoding="async"
+             class="rounded-xl" style="width:100%;height:auto;aspect-ratio:1;object-fit:cover" />
+      ))}
+    </div>
+  </div>
+</section>

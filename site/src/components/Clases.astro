@@ -1,0 +1,52 @@
+---
+const wa = 'https://wa.me/5491131074612?text=Hola%20Gerardo%2C%20quiero%20consultar%20por%20los%20horarios%20de%20las%20clases';
+const sedes = [
+  {
+    nombre: 'Villa Lynch',
+    lugar: 'Soc. de Fomento Dr. Figueroa Alcorta',
+    dir: 'Av. Rodríguez Peña 4754',
+    dias: 'Martes y jueves',
+    detalle: 'Kids, adolescentes y adultos.',
+    maps: 'https://www.google.com/maps/search/?api=1&query=Sociedad%20de%20Fomento%20Figueroa%20Alcorta%2C%20Rodr%C3%ADguez%20Pe%C3%B1a%204754%2C%20Villa%20Lynch',
+  },
+  {
+    nombre: 'Loma Hermosa',
+    lugar: 'Club Ñande Roga',
+    dir: 'Jujuy 1637',
+    dias: 'Miércoles y viernes',
+    detalle: 'Kids 18 a 19 hs · Adolescentes y adultos 19 a 20:30 hs.',
+    maps: 'https://www.google.com/maps/search/?api=1&query=Club%20%C3%91ande%20Roga%2C%20Jujuy%201637%2C%20Loma%20Hermosa',
+  },
+];
+---
+<section id="clases">
+  <div class="wrap">
+    <span class="eyebrow">Horarios y sedes</span>
+    <h2 class="disp">Clases</h2>
+    <p class="sub">Taekwon-Do ITF para kids, adolescentes y adultos. También funcional al aire libre
+    de lunes a viernes. Se empieza sin saber nada y sin equipo: solo ganas.</p>
+
+    <div class="mt-9 grid gap-4 min-[760px]:grid-cols-2">
+      {sedes.map((s) => (
+        <div class="rounded-xl border p-6" style="border-color:var(--line);background:var(--panel)">
+          <b class="disp" style="font-size:22px">{s.nombre}</b>
+          <div class="mt-2 text-[15px]" style="color:var(--ink)">{s.lugar}</div>
+          <div class="text-[14.5px]" style="color:var(--dim)">{s.dir}</div>
+          <div class="mt-4 text-[14.5px]" style="color:var(--ac);font-weight:600">{s.dias}</div>
+          <div class="text-[14.5px]" style="color:var(--dim)">{s.detalle}</div>
+          <a class="btn s mt-5" href={s.maps} target="_blank" rel="noopener">Ver en el mapa</a>
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-5 grid gap-4 items-center rounded-xl border overflow-hidden min-[760px]:grid-cols-[1.1fr_1fr]" style="border-color:var(--line);background:var(--panel)">
+      <img src="/img/foto-kids.jpg" alt="Chicos entrenando Taekwon-Do en el dojo" width="1080" height="1080" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;max-height:340px" />
+      <div class="p-6">
+        <span class="eyebrow">Funcional al aire libre</span>
+        <p class="sub" style="margin-top:10px">Lunes a viernes, entrenamiento funcional en plazas y espacios abiertos.
+        Consultá días y puntos de encuentro por WhatsApp.</p>
+        <a class="btn mt-5" href={wa} target="_blank" rel="noopener">Consultar horarios</a>
+      </div>
+    </div>
+  </div>
+</section>

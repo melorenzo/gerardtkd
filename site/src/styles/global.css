@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+/* Base/theme ported from the original single-page site (kept simple). */
+:root {
+  --ink: #f2f4f7;
+  --dim: #98a0ad;
+  --ac: #2f6fd0;
+  --line: rgba(255, 255, 255, 0.13);
+  --bg: #0b0d11;
+  --panel: #12151b;
+}
+html { scroll-behavior: smooth; background: var(--bg); }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: Inter, system-ui, sans-serif;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+/* padding-inline separado para no pisar el padding vertical de section. */
+.wrap { max-width: 1080px; margin: 0 auto; padding-left: 22px; padding-right: 22px; }
+.disp {
+  font-family: Oswald, system-ui, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: .01em;
+  line-height: 1.02;
+}
+.eyebrow {
+  font-family: Oswald, system-ui, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  font-size: 12.5px;
+  color: var(--ac);
+  font-weight: 600;
+}
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 999px;
+  font-size: 14.5px;
+  padding: 11px 22px;
+  background: var(--ac);
+  color: #fff;
+  white-space: nowrap;
+  transition: transform .15s ease, filter .15s ease;
+}
+.btn:hover { filter: brightness(1.08); transform: translateY(-1px); }
+.btn.s { background: transparent; color: var(--ink); border: 1px solid var(--line); font-weight: 600; }
+section { padding: 104px 0; }
+@media (max-width: 700px) { section { padding: 72px 0; } }
+h2 { font-size: clamp(28px, 5vw, 44px); margin-top: 14px; }
+.sub { color: var(--dim); margin-top: 18px; max-width: 56ch; font-size: 16.5px; }
+.cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 38px; }
+
+/* Animación Taekwon-Do: patada estilizada + líneas de movimiento */
+@keyframes tkd-kick {
+  0%, 100% { transform: rotate(0deg) translateY(0); }
+  35% { transform: rotate(-8deg) translateY(-2px); }
+  55% { transform: rotate(18deg) translateY(-4px); }
+  70% { transform: rotate(12deg) translateY(-2px); }
+}
+@keyframes tkd-impact {
+  0%, 45%, 100% { opacity: 0; transform: translateX(0) scale(.8); }
+  55% { opacity: .9; transform: translateX(6px) scale(1); }
+  75% { opacity: 0; transform: translateX(14px) scale(1.1); }
+}
+@keyframes tkd-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+.tkd-kick { transform-origin: 40% 70%; animation: tkd-kick 2.8s ease-in-out infinite; }
+.tkd-impact { animation: tkd-impact 2.8s ease-in-out infinite; }
+.tkd-float { animation: tkd-float 4s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) {
+  .tkd-kick, .tkd-impact, .tkd-float { animation: none; }
+}

@@ -1,0 +1,30 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Strip from '../components/Strip.astro';
+import ClaseAbierta from '../components/ClaseAbierta.astro';
+import Clases from '../components/Clases.astro';
+import Profe from '../components/Profe.astro';
+import Fotos from '../components/Fotos.astro';
+import Donde from '../components/Donde.astro';
+---
+<BaseLayout>
+  <Header />
+  <main>
+    <Hero />
+    <Strip />
+    <ClaseAbierta />
+    <Clases />
+    <Profe />
+    <Fotos />
+    <Donde />
+  </main>
+  <footer class="border-t" style="border-color:var(--line);padding:44px 0 64px;color:var(--dim);font-size:14px">
+    <div class="wrap">
+      <b style="color:var(--ink);display:block;margin-bottom:6px">ITF ATRA Sáenz Peña</b>
+      <div>Villa Lynch · San Martín · <a href="https://wa.me/5491131074612" target="_blank" rel="noopener" style="color:var(--ac)">WhatsApp</a></div>
+      <div class="mt-4 text-xs" style="opacity:.7">Escuela de Taekwon-Do ITF · Sabum Nim Gerardo Palauro (IV Dan)</div>
+    </div>
+  </footer>
+</BaseLayout>

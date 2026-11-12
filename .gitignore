@@ -1,0 +1,16 @@
+# dependencias / build
+site/node_modules/
+site/dist/
+site/.astro/
+
+# paquetes y archivos de trabajo
+*.zip
+.freebuff/
+page_http.html
+gerardo-tkd-preview.png
+favicon-preview.png
+colocar imagenes/
+
+# sistema
+.DS_Store
+Thumbs.db

@@ -1,0 +1,14 @@
+<div class="strip wrap" style="max-width:1080px">
+  <div><b>Lunes a viernes</b><span>Taekwon-Do y funcional al aire libre</span></div>
+  <div><b>Desde los 4 años</b><span>Kids, adolescentes y adultos</span></div>
+  <div><b>Villa Lynch</b><span>Soc. de Fomento Figueroa Alcorta, Rodríguez Peña 4754</span></div>
+</div>
+<style>
+  .strip{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid var(--line)}
+  .strip div{padding:30px 24px;border-right:1px solid var(--line)}
+  .strip div:last-child{border-right:0}
+  .strip b{display:block;font-family:Oswald,sans-serif;font-size:23px;text-transform:uppercase}
+  .strip span{color:var(--dim);font-size:13.5px}
+  @media(max-width:700px){.strip{grid-template-columns:1fr}
+    .strip div{border-right:0;border-bottom:1px solid var(--line);display:flex;gap:12px;align-items:baseline}}
+</style>

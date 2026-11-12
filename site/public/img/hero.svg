@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1444 1000" width="1444" height="1000" role="img" aria-label="Placeholder: entrenamiento de Taekwon-Do">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b0d11"/>
+      <stop offset="55%" stop-color="#121826"/>
+      <stop offset="100%" stop-color="#0b0d11"/>
+    </linearGradient>
+    <linearGradient id="ac" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2f6fd0" stop-opacity=".0"/>
+      <stop offset="50%" stop-color="#2f6fd0" stop-opacity=".55"/>
+      <stop offset="100%" stop-color="#2f6fd0" stop-opacity=".0"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="70%" cy="45%" r="45%">
+      <stop offset="0%" stop-color="#2f6fd0" stop-opacity=".22"/>
+      <stop offset="100%" stop-color="#2f6fd0" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1444" height="1000" fill="url(#bg)"/>
+  <rect width="1444" height="1000" fill="url(#glow)"/>
+  <!-- tatami / líneas de dojo -->
+  <g opacity=".12" stroke="#f2f4f7" stroke-width="2">
+    <line x1="0" y1="760" x2="1444" y2="760"/>
+    <line x1="0" y1="860" x2="1444" y2="860"/>
+    <line x1="361" y1="760" x2="361" y2="1000"/>
+    <line x1="722" y1="760" x2="722" y2="1000"/>
+    <line x1="1083" y1="760" x2="1083" y2="1000"/>
+  </g>
+  <!-- silueta grupal estilizada -->
+  <g fill="#f2f4f7" opacity=".16" transform="translate(520,320)">
+    <circle cx="80" cy="60" r="34"/>
+    <rect x="52" y="98" rx="10" width="56" height="150"/>
+    <circle cx="210" cy="52" r="38"/>
+    <rect x="178" y="94" rx="10" width="64" height="170"/>
+    <circle cx="350" cy="66" r="30"/>
+    <rect x="326" y="100" rx="10" width="48" height="140"/>
+    <circle cx="470" cy="58" r="36"/>
+    <rect x="440" y="98" rx="10" width="60" height="160"/>
+  </g>
+  <!-- acento de patada -->
+  <g transform="translate(940,380)" opacity=".9">
+    <circle cx="0" cy="0" r="70" fill="none" stroke="#2f6fd0" stroke-width="2" opacity=".35"/>
+    <path d="M-30 40 L-10 -10 L-25 -60" stroke="#f2f4f7" stroke-width="8" stroke-linecap="round" fill="none" opacity=".55"/>
+    <path d="M-10 -10 L30 -20 L85 -40" stroke="#2f6fd0" stroke-width="9" stroke-linecap="round" fill="none"/>
+    <circle cx="-25" cy="-78" r="14" fill="#f2f4f7" opacity=".55"/>
+    <g stroke="#2f6fd0" stroke-width="4" stroke-linecap="round" opacity=".7">
+      <line x1="95" y1="-48" x2="118" y2="-56"/><line x1="98" y1="-36" x2="122" y2="-36"/><line x1="95" y1="-24" x2="118" y2="-16"/>
+    </g>
+  </g>
+  <rect x="80" y="690" width="520" height="3" fill="url(#ac)" opacity=".8"/>
+  <text x="80" y="740" font-family="Oswald, Arial, sans-serif" font-size="34" fill="#98a0ad" letter-spacing="3">FOTO DEL GRUPO · PLACEHOLDER</text>
+  <text x="80" y="785" font-family="Inter, Arial, sans-serif" font-size="22" fill="#98a0ad" opacity=".8">Reemplazar por img/hero.jpg (o hero.svg) real</text>
+</svg>

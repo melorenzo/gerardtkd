@@ -1,0 +1,14 @@
+---
+interface Props { id: string; eyebrow?: string; title: string; text: string; }
+const { id, eyebrow = 'Pendiente', title, text } = Astro.props;
+---
+<section id={id}>
+  <div class="wrap">
+    <span class="eyebrow">{eyebrow}</span>
+    <h2 class="disp">{title}</h2>
+    <p class="sub">{text}</p>
+    <div class="mt-6 rounded-xl border border-dashed p-5 text-sm" style="border-color:var(--line);color:var(--dim);background:var(--panel)">
+      Sección lista para completar con el contenido/imágenes originales (o reconstruidos).
+    </div>
+  </div>
+</section>
